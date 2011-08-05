@@ -9,4 +9,3 @@ gem "friendly_id", "3.2.1"
 
 gem 'cocaine'
 
-gem 'rake', '0.8.7'
