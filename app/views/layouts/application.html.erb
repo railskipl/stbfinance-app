@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>STB Financial Services</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />	
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+	<!-- Start CSS -->
+		
+		<%= stylesheet_link_tag 'style', 'blue', 'anythingSlider', :cache => 'client_css' %>	
+		
+		<!--[if IE 6]>
+		   <link href="css/ie6.css" type="text/css" rel="stylesheet" media="all" />
+		<![endif]-->	
+		<!--[if IE 7]>
+		   <link href="css/ie7.css" type="text/css" rel="stylesheet" media="all" />
+		<![endif]-->
+		<!--[if IE 9]>
+		   <link href="css/ie9.css" type="text/css" rel="stylesheet" media="all" />
+		<![endif]-->		
+	<!-- End CSS -->
+	<!-- Start Javascript -->
+		<!--[if IE 6]>
+			<script src="js/DD_belatedPNG.js"></script>
+			<script>
+			  DD_belatedPNG.fix('.ie6fix');   /* Add this class to any PNG that needs to have transparency fixed for IE 6 */
+			</script>
+		<![endif]--> 
+		
+		<%= javascript_include_tag 'jquery-1.5.2.min.js', 'jquery.easing.1.2.js','jquery.anythingslider.js', :cache => 'client_js' %>
+		 		
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// Anything-Slider 			
+					function formatText(index, panel) {
+						  return index + "";
+					  };
+				
+					$(function () {
+						$('.anythingSlider').anythingSlider({
+							easing: "easeInOutExpo",        // Anything other than "linear" or "swing" requires the easing plugin
+							autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not.
+							delay: 9000,                    // How long between slide transitions in AutoPlay mode
+							startStopped: false,            // If autoPlay is on, this can force it to start stopped
+							animationTime: 800,             // How long the slide transition takes
+							hashTags: false,                 // Should links change the hashtag in the URL?
+							buildNavigation: false,          // If true, builds and list of anchor links to link to each slide
+								pauseOnHover: true             // If true, and autoPlay is enabled, the show will pause on hover
+						});
+					});			
+			}); 		
+		</script>	
+		<%= javascript_include_tag 'superfish.js', 'jquery.tweet.js','stylesheetToggle.js', 'common.js', :cache => 'client_jsall' %>
+		
+	<!-- End Javascript -->		
+</head>
+<body>
+<!-- Start Header -->
+<div id="header">
+	<!-- Start Logo -->
+	<h2 id="logo" class="round-bottom"><a href="/" class="ie6fix" >Elevate Theme</a></h2>
+	<!-- End Logo -->	
+	<!-- Start Navigation -->
+	<div id="main-nav">
+		<ul class="sf-menu">
+			<li>
+				<a id="nav-selected" class="nav-item" href="/">Home</a>
+			</li>
+			<li>
+				<a class="nav-item" href="/pages/about">About</a>
+			</li>
+			
+				<li>
+					<a class="nav-item" href="/pages/services">Services</a>
+				</li>
+			
+			<li>
+				<a class="nav-item" href="/contacts">Contact</a>
+			</li>																		
+		</ul>
+	</div>
+	<!-- End Navigation -->
+</div>
+<!-- End Header -->
+
+
+
+			<p class="notice"><%= notice %></p>
+	       	<p class="alert"><%= alert %></p>
+
+
+			<%= yield %>
+
+
+
+
+<!-- Start Footer -->
+<div id="footer">
+	<div id="footer-top">
+		<div id="footer-header" class="round-bottom"></div>	
+		<div class="footer-content">
+			<div id="contact">
+				<h3>Get in Touch</h3>
+				<p>Aliquam odio neque, porttitor ut aliquam eu, aliquam quis purus. Mauris nunc sapien, sodales eu adipiscing.</p>
+				<a href="/contacts" class="footer-btn round-all">Contact Us</a>					
+			</div>
+			<div class="footer-col">
+				<h3>Connect</h3>
+				<ul>
+					<li><a id="twitter" class="footer-icon-link" href="#">Twitter</a></li>
+					<li><a id="facebook" class="footer-icon-link" href="#">Facebook</a></li>
+					<li><a id="tumblr" class="footer-icon-link" href="#">Tumblr</a></li>
+					<li><a id="youtube" class="footer-icon-link" href="#">YouTube</a></li>
+					<li><a id="flickr" class="footer-icon-link" href="#">Flickr</a></li>
+					<li><a id="rss" class="footer-icon-link" href="#">RSS Feed</a></li>					
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h3>Pages</h3>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Features</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Styles</a></li>		
+					<li><a href="/contacts">Contact</a></li>													
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h3>Blog</h3>
+				<ul>
+					<li><a href="#">Branding</a></li>
+					<li><a href="#">Development</a></li>
+					<li><a href="#">Case Studies</a></li>
+					<li><a href="#">Marketing</a></li>
+					<li><a href="#">News</a></li>		
+					<li><a href="#">Web Design</a></li>													
+				</ul>
+			</div>
+							
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer-bottom">
+		<div class="footer-content">
+			<ul>
+				<li><a href="/pages/terms-and-conditions">Terms &amp; Conditions</a></li>
+				<li><a href="/pages/privacy-policy">Privacy Policy</a></li>				
+			</ul>
+			<p class="fr">STB Financial Services &copy; 2011. Powered by <a class="high-link" href="http://kunalinfotech.net/" target="_blank">Kunal Infotech Pvt Ltd.</a></p>
+			<div class="clear"></div>
+		</div>	
+	</div>
+</div>
+<!-- End Footer -->
+
+</body>
+</html>

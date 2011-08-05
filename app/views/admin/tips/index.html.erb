@@ -1,0 +1,28 @@
+<div id="content">
+	<p class='buttons'>
+		
+		<%= link_to  "Add Tips", new_admin_tip_path, :class => 'button positive' %>
+		</p>
+		<p class='clear'></p>
+
+			<table class="admintable">
+			  <tr class="admintablehd">
+			    <td width="25%">Title</td>
+			    <td>Description</td>
+			    <td width="27%" style="text-align: center !important;">Action</td>
+			  </tr>
+			
+			<% @tips.each do |tip| %>
+			  <tr>
+			    <td><%= link_to tip.title, admin_tip_path(tip) %></td>
+			    <td><%= truncate(tip.description, :length => 110) %></td>
+			    <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_tip_path(tip), :class=>'button positive' %> &nbsp;&nbsp; 
+				<a href="/admin/tips/<%= tip.id %>/delete" onclick="if(confirm('Are you sure you want to delete this tips?'))  return true;  else  return false;" class="button negative" >Delete</a>
+				</td>
+			    
+			  </tr>
+			<% end %>
+			</table>
+			
+			<br />
+</div>

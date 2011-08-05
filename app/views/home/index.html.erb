@@ -1,0 +1,149 @@
+<div id="stage-wrap">
+	<!-- Start Ad and Promotion Content -->
+	<div id="stage">
+        <div class="anythingSlider">
+        	<div class="wrapper">
+				<ul>
+					<li>
+						<div class="slide-feature round-all fl">
+							<img alt="" src="images/slide1-596x310.jpg" />
+						</div>
+						<div class="slide-content fr">
+							<h2>Color Skins</h2>
+							<p>Elevate comes with a variety of different skins to fit your project. A Photoshop file setup with slices for quick and convenient creation of custom skins is also included.</p>
+							<ul class="bullet-list">
+								<li>15 skins</li>
+								<li>Photoshop file with slices</li>
+							</ul>
+							<a href="#" class="small-secondary-btn">Learn More</a>	
+						</div>
+				   	</li>
+				    <li>
+				   		<div class="slide-feature round-all fr">
+							<img alt="" src="images/slide2-596x310.jpg" />
+						</div>
+						<div class="slide-content fl">
+							<h2>Homepage Options</h2>
+							<p>There are 3 homepage templates included and two different content sliders to choose from. One homepage is geared towards general business, another for showcasing a portoflio/work, and one for SaaS that highlights features/benefits.</p>
+							<a href="#" class="small-secondary-btn">Learn More</a>	
+						</div>		   
+					 </li>
+				    <li>
+				   		<div class="slide-feature round-all fl">
+							<img alt="" src="images/slide3-596x310.jpg" />
+						</div>
+						<div class="slide-content fr">
+							<h2>Social Features</h2>
+							<ul class="bullet-list">
+								<li>Twitter timeline feed in footer. Comes with different settings including options to turn on/off avatar image as well as number of tweets to display.</li>
+								<li>Ability to turn Twitter @mentions on blog pages into links and display a hovercard. Uses the Twitter @Anywhere API.</li>
+								<li>Facebook Like and Tweet buttons for social promotion.</li>
+							</ul>
+						</div>
+					 </li>
+				    <li>
+				   		<div class="slide-feature round-all fr">
+							<img alt="" src="images/slide4-596x310.jpg" />
+						</div>
+						<div class="slide-content fl">
+							<h2>Email Form and Lightbox</h2>
+							<p>Elevate comes with a AJAX/PHP email contact form and a lightbox for displaying images and videos.</p>
+							<a href="#" class="small-secondary-btn">Learn More</a>
+						</div>
+					 </li>
+				</ul>        
+			</div>
+		</div>  
+	</div>
+	<!-- End Ad and Promotion Content -->	
+</div>
+<div id="headline-wrap">
+	<div id="headline-callout">
+		<h1>Find out how we can help you transform your company with our world-class services.</h1>
+		<a href="/contacts" class="large-primary-btn">Contact Us<span class="ie6fix"></span></a>	
+	</div>
+</div>
+<!-- Start Content -->
+<div id="home-wrap">	
+	<div id="content">
+		<!-- Start Main Content -->	
+		<div id="main-content">
+			<h3>What We Do</h3>
+			<p>Aliquam odio neque, porttitor ut aliquam eu, aliquam quis purus. Mauris nunc sapien, sodales eu adipiscing in, lobortis eu justo. Curabitur in mollis erat. Phasellus vel elit non dolor fermentum volutpat ut quis enim.</p>
+			<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula.</p>
+			<div class="section">				
+				<div class="three-col">
+					<div class="highlight-box">
+						<img class="large-icon ie6fix" alt="" src="images/checked-paper.png" />
+						<h3>Solutions for your business</h3>
+					</div>
+					<p class="no-pad">Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula.</p>
+					<a href="#" class="arrow-link">Learn More</a>		
+				</div>
+				<div class="three-col">
+					<div class="highlight-box">
+						<img class="large-icon ie6fix" alt="" src="images/web.png" />
+						<h3>Take advantage of our global reach</h3>
+					</div>
+					<p class="no-pad">Donec commodo euismod rutrum. Proin rhoncus eros a sapien tempor vestibulum. Sed egestas posuere risus quis sodales. Nulla et sapien at tortor condimentum euismod ac in velit. Integer suscipit lorem id nunc gravida congue. Aliquam libero nisi, imperdiet at, tincidunt nec.</p>
+					<a href="#" class="arrow-link">Learn More</a>		
+				</div>			
+				<div class="ruler"></div>
+				<div class="three-col">
+					<h3>Benefits</h3>
+					<ul class="check-list">
+						<li class="ie6fix">Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est.</li>
+						<li class="ie6fix">Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula.</li>
+						<li class="ie6fix">Proin rhoncus eros a sapien tempor.</li>					
+					</ul>
+				</div>
+				<div class="three-col">
+					<h3>What people are saying</h3>
+					<div class="quote">
+						<div class="ie6fix"></div>
+						<p><em>Aliquam odio neque, porttitor ut aliquam eu, aliquam quis purus. Mauris nunc sapien, sodales eu adipiscing in, lobortis eu justo. Curabitur in mollis erat. Phasellus vel elit non dolor fermentum volutpat ut quis enim.</em></p>
+						<p><strong>Simon Cartwright, CFO</strong></p>
+					</div>
+				</div>
+				<div class="ruler"></div>				
+			</div>													
+		</div>
+		<!-- End Main Content -->			
+		<!-- Start Sidebar -->
+		<div id="sidebar">
+			<div class="widget">
+				<div class="widget-top round-top"></div>
+				<h3>Recent Stock Market Tips</h3>				
+				<div class="widget-content">
+				<% tips = Tip.find(:all, :order => 'id desc', :limit => 5) %>
+				<% tips.each do |stip| %>
+				<ul class="arrow-list">
+					<li>
+						<%= link_to stip.title , tip_path(stip) %>
+						<p><em><%= truncate(stip.description, :length => 70) %></em></p>
+					</li>
+														
+				</ul>
+				
+				<% end %>
+				
+				</div>
+			</div>
+			<div class="widget">
+				<div class="widget-top round-top"></div>
+				<h3>Our Services</h3>
+				<div class="widget-content">
+					<ul class="arrow-list">
+						<li><a href="#">Technology Consulting</a></li>
+						<li><a href="#">Brand Management</a></li>
+						<li><a href="#">Training</a></li>													
+						<li><a href="#">Public Relations</a></li>									
+					</ul>
+				</div>
+			</div>			
+		</div>
+		<!-- End Sidebar -->
+		<div class="clear"></div>
+	</div>
+</div>
+<!-- End Content -->
