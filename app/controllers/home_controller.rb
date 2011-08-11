@@ -12,7 +12,8 @@ class HomeController < ApplicationController
 
     	        Emailer.deliver_contact_email(contact)
 
-    	        redirect_to("/contacts")
+              flash[:notice] = "Thank you for sending a mail."
+    	        redirect_to("/")
 
     	      end
 
