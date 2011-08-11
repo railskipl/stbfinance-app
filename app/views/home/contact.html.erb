@@ -26,7 +26,7 @@
 				<fieldset>
 					<p class="hide" id="response"></p>				
 					<div class="field-group">
-						<label class="required" for="form_name"><%= form.label :name, 'Name: ' %></label>
+						<label class="required" for="form_name">Name<span>*</span></label>
 						<%= form.text_field :name, :size => 40, :class => "field text validate[required,length[2,30]]" %>
 						
 					</div>
@@ -36,7 +36,7 @@
 						
 					</div>
 					<div class="clear"></div>
-					<label class="required" for="form_message">Message<span>*</span></label>
+					<label class="required" for="form_email">Email<span>*</span></label>
 					<%= form.text_area :message, :rows => 4, :cols => 34, :class => 'text long validate[required,length[4,600]]' %>						
 					<%= submit_tag 'Submit', :class => "small-primary-btn input-btn" %>
 					
