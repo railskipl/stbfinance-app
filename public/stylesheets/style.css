@@ -202,9 +202,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 32px;
-	line-height: 35px;
-	padding-bottom: 15px;
+	font-size: 23px;
+	line-height: 22px;
+	padding-bottom: 8px;
 }
 
 h2 {
@@ -1981,3 +1981,8 @@ blockquote p {
 #sunset {
     background: url(../images/sunset.gif) repeat-x 0 bottom;
 }
+
+.pagination_magArticles{padding-top:1px;}
+.pagination_magArticles a{border:1px solid #aabbcc; margin-right:3px; color:#000099; padding:4px 5px; background:#fff;font-weight:bold}
+.pagination_magArticles em{border: 1px solid #AABBCC; color: red; font-weight: bold; padding: 4px 5px; }
+.pagination_magArticles {padding:3px;}

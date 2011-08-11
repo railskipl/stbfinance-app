@@ -17,27 +17,38 @@
 			<img class="img-box-large section" alt="" src="images/map.jpg" />
 		</div>		
 		<div class="two-col end-col">
-			<form id="contact-form" method="post">
+		
+		
+		   <div id="contact-form">
+			<% form_for :reset_password do |form| %>
+			
+			   <%= form.hidden_field :id, :value => '1' %>
 				<fieldset>
 					<p class="hide" id="response"></p>				
 					<div class="field-group">
-						<label class="required" for="form_name">Name<span>*</span></label>
-						<input id="form_name" name="name" class="field" type="text" />
+						<label class="required" for="form_name"><%= form.label :name, 'Name: ' %></label>
+						<%= form.text_field :name, :size => 40, :class => "field text validate[required,length[2,30]]" %>
+						
 					</div>
 					<div class="field-group">
-						<label class="required" for="form_email">Email<span>*</span></label>
-						<input id="form_email" name="email" class="field" type="text" />
+						<%= form.label :email, 'Email: ' %>
+						<%= form.text_field :email, :size => 40, :class => "field text validate[required,custom[email]]" %>
+						
 					</div>
 					<div class="clear"></div>
-					<label class="required" for="form_message">Message<span>*</span></label>						
-					<textarea id="form_message" name="message" rows="" cols=""></textarea>
-					<input id="form_submit" class="small-primary-btn input-btn" type="submit" name="submit" value="Send Message" />
+					<label class="required" for="form_message">Message<span>*</span></label>
+					<%= form.text_area :message, :rows => 4, :cols => 34, :class => 'text long validate[required,length[4,600]]' %>						
+					<%= submit_tag 'Submit', :class => "small-primary-btn input-btn" %>
+					
             		<div class="hide">
                			<label for="spam_check">Do not fill out this field</label>
                 		<input id="spam_check" name="spam_check" type="text" value="" />
           			</div>					
 				</fieldset>
-			</form>		
+			<% end %>
+		   </div>
+		
+				
 		</div>
 		<div class="ruler"></div>
 	</div>

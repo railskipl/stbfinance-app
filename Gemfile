@@ -9,3 +9,4 @@ gem "friendly_id", "3.2.1"
 
 gem 'cocaine'
 
+gem 'will_paginate', '3.0.pre2'
