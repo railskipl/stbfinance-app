@@ -7,7 +7,7 @@ class Emailer < ActionMailer::Base
 
       protected
         def setup_email(contact)
-          @recipients  = "info@nagpurartgallery.com"
+          @recipients  = "#{contact.email}"
           @from        = "#{contact.email}"
           @subject     = "STB Finance - Contact Us: "
           @sent_on     = Time.now
