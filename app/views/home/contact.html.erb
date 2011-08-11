@@ -31,12 +31,12 @@
 						
 					</div>
 					<div class="field-group">
-						<%= form.label :email, 'Email: ' %>
+						<label class="required" for="form_email">Email<span>*</span></label>
 						<%= form.text_field :email, :size => 40, :class => "field text validate[required,custom[email]]" %>
 						
 					</div>
 					<div class="clear"></div>
-					<label class="required" for="form_email">Email<span>*</span></label>
+					<label class="required" for="form_message">Message<span>*</span></label>
 					<%= form.text_area :message, :rows => 4, :cols => 34, :class => 'text long validate[required,length[4,600]]' %>						
 					<%= submit_tag 'Submit', :class => "small-primary-btn input-btn" %>
 					
