@@ -1987,5 +1987,5 @@ blockquote p {
 .pagination_magArticles em{border: 1px solid #AABBCC; color: red; font-weight: bold; padding: 4px 5px; }
 .pagination_magArticles {padding:3px;}
 
-.errorMsg { background: #3F4044; color: #E2311D; font-size: 11px; font-weight: bold; margin: 0 auto; overflow: hidden; padding: 5px 2px 4px 14px; text-align: center; width: 940px; }
+.errorMsg { background: #3F4044; color: #fff; font-size: 14px; font-weight: bold; margin: 0 auto; overflow: hidden; padding: 5px 2px 4px 14px; text-align: center; width: 940px; }
 
