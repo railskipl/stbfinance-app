@@ -18,8 +18,12 @@ class HomeController < ApplicationController
     	      end
 
     	   else
-    	     
+    	     @title = "contacts"
   	     end
+  end
+  
+  def index
+    @title = "home"
   end
   
 end

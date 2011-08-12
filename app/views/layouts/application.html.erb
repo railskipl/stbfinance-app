@@ -67,16 +67,16 @@
 	<div id="main-nav">
 		<ul class="sf-menu">
 			<li>
-				<a id="nav-selected" class="nav-item" href="/">Home</a>
+				<a <% if @title == 'home' %> id="nav-selected" <% end %> class="nav-item" href="/">Home</a>
 			</li>
 			<li>
-				<a class="nav-item" href="/pages/about">About</a>
+				<a <% if @title == 'About' %> id="nav-selected" <% end %> class="nav-item" href="/pages/about">About</a>
 			</li>
 			
 			
 				
 				<li class="dropdown">
-					<a class="nav-item" href="#">Services</a>
+					<a <% if @title == 'Finance' %> id="nav-selected" <% elsif @title == 'Education' %> id="nav-selected" <% end %> class="nav-item" href="#">Services</a>
 						<ul class="dropdown-wrap">
 							<li>
 								<a href="/pages/finance">Finance</a>
@@ -88,7 +88,7 @@
 				</li>
 			
 			<li>
-				<a class="nav-item" href="/contacts">Contact</a>
+				<a <% if @title == 'contacts' %> id="nav-selected" <% end %> class="nav-item" href="/contacts">Contact</a>
 			</li>																		
 		</ul>
 	</div>
