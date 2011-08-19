@@ -97,14 +97,15 @@
 <!-- End Header -->
 
 			<div class="marquee">
-			<MARQUEE BEHAVIOR=SCROLL DIRECTION=LEFT>
+				
+			<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
 				<% tips = Tip.find(:all, :order => 'id desc', :limit => 5) %>
 				<% tips.each do |stip| %>
 				
 				<%= link_to stip.title , tip_path(stip), :class=>'marquee_text' %> ..... &nbsp;&nbsp;&nbsp;&nbsp;
 				<% end %>
 				
-				</MARQUEE>
+			</marquee>
 			</div>
 			<%= content_tag 'div', h(flash[:notice]), :class => 'errorMsg', :id => 'notice' if flash[:notice] %>
 			
