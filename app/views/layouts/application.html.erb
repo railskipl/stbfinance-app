@@ -96,11 +96,14 @@
 </div>
 <!-- End Header -->
 
-
+			<div style="color: #2C2B2B;font-size: 14px;
+			    font-weight: bold; margin: 0 auto; overflow: hidden; padding: 5px 2px 4px 14px; text-align: center; width:940px">
+			<FONT SIZE="4" FACE="courier"><MARQUEE BEHAVIOR=SCROLL DIRECTION=RIGHT>This is an example of a marquee scrolling to the right...</MARQUEE></FONT>
+			</div>
 			<%= content_tag 'div', h(flash[:notice]), :class => 'errorMsg', :id => 'notice' if flash[:notice] %>
 			
 	       	<p class="alert"><%= alert %></p>
-
+			
 
 			<%= yield %>
 
@@ -138,6 +141,7 @@
 							
 		</div>
 		<div class="clear"></div>
+		 
 	</div>
 	<div id="footer-bottom">
 		<div class="footer-content">
