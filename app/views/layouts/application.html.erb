@@ -96,9 +96,15 @@
 </div>
 <!-- End Header -->
 
-			<div style="color: #2C2B2B;font-size: 14px;
-			    font-weight: bold; margin: 0 auto; overflow: hidden; padding: 5px 2px 4px 14px; text-align: center; width:940px">
-			<FONT SIZE="4" FACE="courier"><MARQUEE BEHAVIOR=SCROLL DIRECTION=RIGHT>This is an example of a marquee scrolling to the right...</MARQUEE></FONT>
+			<div class="marquee">
+			<MARQUEE BEHAVIOR=SCROLL DIRECTION=LEFT>
+				<% tips = Tip.find(:all, :order => 'id desc', :limit => 5) %>
+				<% tips.each do |stip| %>
+				
+				<%= link_to stip.title , tip_path(stip), :class=>'marquee_text' %> ..... &nbsp;&nbsp;&nbsp;&nbsp;
+				<% end %>
+				
+				</MARQUEE>
 			</div>
 			<%= content_tag 'div', h(flash[:notice]), :class => 'errorMsg', :id => 'notice' if flash[:notice] %>
 			

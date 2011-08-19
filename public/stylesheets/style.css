@@ -1989,3 +1989,5 @@ blockquote p {
 
 .errorMsg { background: #3F4044; color: #fff; font-size: 14px; font-weight: bold; margin: 0 auto; overflow: hidden; padding: 5px 2px 4px 14px; text-align: center; width: 940px; }
 
+.marquee {margin: 0 auto; overflow: hidden; padding: 5px 2px 4px 14px; text-align: center; width:940px;}
+.marquee_text {color: #4B4B4B !important;font-weight: bold; background: url("../images/skins/blue/arrow.gif") no-repeat scroll 0 6px transparent; font-size: 13px; display: inline-block; padding-left: 8px;}
