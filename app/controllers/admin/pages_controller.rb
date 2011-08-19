@@ -3,7 +3,7 @@ class Admin::PagesController < Admin::BaseController
   before_filter :authenticate_admin!, :except => []
   
     def index
-      @pages = Page.all
+      @pages = Page.find(:all).paginate(:per_page => 10, :page => params[:page])
     end
 
     def new

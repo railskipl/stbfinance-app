@@ -3,7 +3,7 @@ class Admin::TipsController < Admin::BaseController
   before_filter :authenticate_admin!, :except => []
   
   def index
-    @tips = Tip.all
+    @tips = Tip.find(:all).paginate(:per_page => 10, :page => params[:page])
   end
 
   def new
