@@ -99,10 +99,10 @@
 			<div class="marquee">
 				
 			<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-				<% tips = Tip.find(:all, :order => 'id desc', :limit => 5) %>
-				<% tips.each do |stip| %>
+				<% notifications = Notification.find(:all, :order => 'id desc') %>
+				<% notifications.each do |notification| %>
 				
-				<%= link_to stip.title , tip_path(stip), :class=>'marquee_text' %> ..... &nbsp;&nbsp;&nbsp;&nbsp;
+				<%= link_to notification.title , notification_path(notification), :class=>'marquee_text' %> ..... &nbsp;&nbsp;&nbsp;&nbsp;
 				<% end %>
 				
 			</marquee>

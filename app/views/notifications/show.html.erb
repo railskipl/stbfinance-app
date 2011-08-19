@@ -5,15 +5,15 @@
 		<div id="main-content">
 		
 		  <div class="post-list">
-					<h1><%= @tips.title %></h1>
+					<h1><%= @notification.title %></h1>
 						<div class="post-meta">
 							<ul>
-								<li class="meta-date ie6fix"><%= (@tips.created_at.strftime("%a %d %b, %Y")) %></li>
+								<li class="meta-date ie6fix"><%= (@notification.created_at.strftime("%a %d %b, %Y")) %></li>
 								
 							</ul>
 							<div class="clear"></div>
 						</div>
-					<p><%= strip_tags(@tips.description) %></p>
+					<p><%= strip_tags(@notification.description) %></p>
 								
 					<div class="clear"></div>
 					<div class="main-ruler"></div>			

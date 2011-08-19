@@ -26,6 +26,7 @@
 				
 				<li><% if controller.controller_name == 'pages' %> <%= link_to "Pages", admin_pages_path, :class=>"active" %> <% else %> <%= link_to "Pages", admin_pages_path %> <% end %></li>
 				<li><% if controller.controller_name == 'tips' %> <%= link_to "Tips", admin_tips_path, :class=>"active" %> <% else %> <%= link_to "Tips", admin_tips_path %> <% end %></li>
+				<li><% if controller.controller_name == 'notifications' %> <%= link_to "Notifications", admin_notifications_path, :class=>"active" %> <% else %> <%= link_to "Notifications", admin_notifications_path %> <% end %></li>
 				
 				<li>
 					<% if admin_signed_in? %> 

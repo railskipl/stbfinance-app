@@ -1,0 +1,14 @@
+<% form_for [:admin, @notification] do |form| %>
+  	<%- @notification.errors.full_messages.each do |message| -%>
+	   <div class="errorExplanation"> <p><%= message %></p></div>
+	  <%- end -%>
+  <p>
+    <%= form.label :title %>
+    <%= form.text_field :title, :class => 'text' %>
+  </p>
+  <p>
+    <%= form.label :description %>
+    <%= form.text_area :description, :class => 'tiny_mce' %>
+  </p>
+  <%= render :partial =>"shared/button" %>
+<% end %>

@@ -8,7 +8,7 @@
 					<h1><%= tip.title %></h1>
 						<div class="post-meta">
 							<ul>
-								<li class="meta-date ie6fix"><%= tip.updated_at %></li>
+								<li class="meta-date ie6fix"><%= (tip.created_at.strftime("%a %d %b, %Y")) %></li>
 								
 							</ul>
 							<div class="clear"></div>

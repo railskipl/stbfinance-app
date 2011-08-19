@@ -6,11 +6,13 @@ Stbfinance::Application.routes.draw do |map|
   
 
   resources :tips
+  resources :notifications
   
   map.connect '/contacts', :controller=>'home', :action=>'contact'
   map.connect '/pages/:id', :controller=>'pages', :action=>'show'
   map.connect '/admin/pages/:id/delete', :controller=>'admin/pages', :action=>'destroy'
   map.connect '/admin/tips/:id/delete', :controller=>'admin/tips', :action=>'destroy'
+  map.connect '/admin/notifications/:id/delete', :controller=>'admin/notifications', :action=>'destroy'
   
   # Administration
    namespace :admin do 
@@ -18,7 +20,7 @@ Stbfinance::Application.routes.draw do |map|
      
      resources :pages 
      resources :tips
-     
+     resources :notifications
   end
   
   root :to => "home#index"
