@@ -3,22 +3,24 @@
 
 	<!-- Start Main Content -->	
 		<div id="main-content">
-		
+		<% @notifications.each do |notification| %>
 		  <div class="post-list">
-					<h1><%= @notification.title %></h1>
+					<h1><%= notification.title %></h1>
 						<div class="post-meta">
 							<ul>
-								<li class="meta-date ie6fix"><%= (@notification.created_at.strftime("%a %d %b, %Y")) %></li>
+								<li class="meta-date ie6fix"><%= (notification.created_at.strftime("%a %d %b, %Y")) %></li>
 								
 							</ul>
 							<div class="clear"></div>
 						</div>
-					<p><%= @notification.description.html_safe %></p>
-								
+					<p><%= truncate(notification.description, :length => 310).html_safe %></p>
+						
+						<%= link_to "Learn More", notification_path(notification), :class=>'arrow-link' %>	
 					<div class="clear"></div>
 					<div class="main-ruler"></div>			
 		   </div>
-		
+		<% end %>
+		<%= will_paginate @notifications, :class=>'pagination_magArticles' %>
 		</div>
 	<!-- End Main Content -->
 		

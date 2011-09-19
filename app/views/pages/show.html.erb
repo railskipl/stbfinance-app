@@ -25,7 +25,7 @@
 				<ul class="arrow-list">
 					<li>
 						<%= link_to stip.title , tip_path(stip) %>
-						<p><em><%= truncate(stip.description, :length => 70) %></em></p>
+						<p><em><%= truncate(stip.description, :length => 70).html_safe %></em></p>
 					</li>
 														
 				</ul>
@@ -39,7 +39,7 @@
 				<h3>Get in Touch</h3>
 				<div class="widget-content">
 					<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.</p>
-					<a href="#" class="arrow-link">Contact Us</a>			
+					<a href="/contacts" class="arrow-link">Contact Us</a>			
 				</div>
 			</div>					
 		</div>
