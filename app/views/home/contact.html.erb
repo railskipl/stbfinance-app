@@ -1,51 +1,3 @@
-<%= javascript_include_tag 'jquery-1.2.6.pack.js', 'jquery.validate.min.js' %>
-<script type="text/javascript">
-
-	// validate signup form on keyup and submit
-
-	jQuery(document).ready(function() {
-  jQuery("#myform").validate({
-	errorElement:'div',
-	rules: {
-		name:{
-					required: true,
-                        		character:true,
-                        		minlength:2,
-     					maxlength:49
-			},
-		
-		email:{
-						required:true,
-						email:true
-		},
-		
-		message:{
-						required:true,
-						maxlength:499
-		}
-		},
-	messages: {
-		name:{
-			required: "Please enter name",
-                        character: "Please enter only character",
-                        minlength:jQuery.format("Please enter valid name"),
-			maxlength:jQuery.format("do not enter more than 50 charecter")
-			},
-		
-		email:{
-						required: "Please enter email address",
-						email: "Please enter valid email id"
-						
-		},
-		message:{
-						required: "Please enter comment",
-						maxlength:jQuery.format("Can not exceed 500 characters")
-		}
-		}
-	});
-});
-</script>
-
 <!-- Start Content -->
 <div id="content">
 	<!-- Start Main Content -->	
@@ -68,7 +20,7 @@
 		
 		
 		   <div id="contact-form">
-			<% form_for :reset_password, :html => { :id => 'myform' } do |form| %>
+			<% form_for :reset_password do |form| %>
 			
 			   <%= form.hidden_field :id, :value => '1' %>
 				<fieldset>
