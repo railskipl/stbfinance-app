@@ -46,8 +46,8 @@ Stbfinance::Application.configure do
       :address              => 'smtp.gmail.com',
       :port                 => 587,
       :domain               => 'imap.gmail.com',
-      :user_name            => 'info@nagpurartgallery.com',
-      :password             => 'B1a2z3a4a5R6',
+      :user_name            => 'info@stbgroup.in',
+      :password             => 'stbgroup123!',
       :authentication       => 'login',
       :enable_starttls_auto => true
     }
