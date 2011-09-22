@@ -20,6 +20,7 @@ class HomeController < ApplicationController
     	   else
     	     @title = "contacts"
   	     end
+  	     @meta_title = "STB Finance Service - Contact Us"
   end
   
   def index
