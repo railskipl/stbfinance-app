@@ -15,7 +15,7 @@
 			<% @notifications.each do |notification| %>
 			  <tr>
 			    <td><%= link_to notification.title, admin_notification_path(notification) %></td>
-			    <td><%= truncate(notification.description, :length => 110) %></td>
+			    <td><%= truncate(notification.description, :length => 110).html_safe %></td>
 			    <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_notification_path(notification), :class=>'button positive' %> &nbsp;&nbsp; 
 				<a href="/admin/notifications/<%= notification.id %>/delete" onclick="if(confirm('Are you sure you want to delete this notification?'))  return true;  else  return false;" class="button negative" >Delete</a>
 				</td>
