@@ -7,10 +7,13 @@ class ApplicationController < ActionController::Base
   
   def rescue_with_handler(exception)
       redirect_to '/'
-    end
+  end
 
-    def method_missing(id, *args)
+  def method_missing(id, *args)
       redirect_to '/'
-    end
+  end
+    
+    
+    
   
 end

@@ -1991,3 +1991,15 @@ blockquote p {
 
 .marquee {margin: 0 auto; overflow: hidden; padding: 5px 2px 4px 14px; text-align: center; width:940px;}
 .marquee_text {color: #4B4B4B !important;font-weight: bold; background: url("../images/skins/blue/arrow.gif") no-repeat scroll 0 6px transparent; font-size: 13px; display: inline-block; padding-left: 8px;}
+
+ #body_content h1 {
+    color: #EB1313;
+    font-family: "Trebuchet MS",Trebuchet;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+#body_error_left *, #body_error_right * {
+    color: #585858;
+    line-height: 22px;
+}

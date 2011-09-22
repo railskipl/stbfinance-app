@@ -26,5 +26,5 @@ Stbfinance::Application.routes.draw do |map|
   end
   
   root :to => "home#index"
-  
+  match "*path" => 'home#page-not-found'
 end
