@@ -34,7 +34,7 @@ blockquote, q {
 
 body {
 	background: url(../images/header-bg.gif) repeat-x 0 0;
-	font: 12px/20px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+	font: 12px/20px Arial,Helvetica,sans-serif;
 	color: #4b4b4b;
 }
 
