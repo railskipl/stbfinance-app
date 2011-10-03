@@ -3,7 +3,7 @@ class Admin::NotificationsController < Admin::BaseController
   before_filter :authenticate_admin!, :except => []
   
   def index
-    @notifications = Notification.find(:all).paginate(:per_page => 10, :page => params[:page])
+    @notifications = Notification.find(:all, :order => 'id desc').paginate(:per_page => 10, :page => params[:page])
   end
 
   def new
