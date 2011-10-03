@@ -63,7 +63,8 @@
 		<!-- Start Main Content -->	
 		<div id="main-content">
 			<h3>What We Do</h3>
-			<p>STB Financial Services is one of the most trusted financial service providers in Central India. With diversified business in Financial Services such as Stock Broking Services, Share Market Advisory Services, Mutual Funds, Life Insurance Services up to the Education Services such as coaching for CS, CPT (CA Entrance), ICWA, BCA, BBA, BCCA, HSSC, B.Com, MBA etc., we have emerged as the global leader in these two major verticals.</p>
+			<% @aboutpage = Page.find(8) %>
+			<p><%= truncate(@aboutpage.body, :length => 70).html_safe %></p>
 			 <a href="/pages/about" class="arrow-link">Learn More</a>
 			<div class="section">				
 				<div class="three-col">
