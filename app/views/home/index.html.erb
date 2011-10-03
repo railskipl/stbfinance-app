@@ -64,7 +64,7 @@
 		<div id="main-content">
 			<h3>What We Do</h3>
 			<% @aboutpage = Page.find(8) %>
-			<p><%= truncate(@aboutpage.body, :length => 70).html_safe %></p>
+			<span><%= truncate(@aboutpage.body, :length => 280).html_safe %></span>
 			 <a href="/pages/about" class="arrow-link">Learn More</a>
 			<div class="section">				
 				<div class="three-col">
