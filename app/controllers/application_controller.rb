@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   def method_missing(id, *args)
       redirect_to '/'
   end
+  
     
   before_filter :meta_defaults
     private

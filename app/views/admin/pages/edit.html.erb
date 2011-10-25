@@ -2,7 +2,7 @@
 
     <div id="content">
 
-		<% form_for [:admin, @page] do |f| %>
+		<% form_for [:admin, @page],:html => { :multipart => true } do |f| %>
 		  
 		  <%- @page.errors.full_messages.each do |message| -%>
 		   <div class="errorExplanation"> <p><%= message %></p></div>
@@ -17,10 +17,7 @@
 		    <%= f.text_field :title, :class => 'text' %>
 		  </p>
 		  
-		  <p>
-		 	<%= f.label :photo %>
-		  	<%= f.file_field :photo %>
-		  </p>
+		  
 		  <p>
 		    <%= f.label :body %>
 		    <%= f.text_area :body, :class => 'tiny_mce' %>

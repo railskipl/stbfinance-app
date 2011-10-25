@@ -19,13 +19,10 @@
 		    <%= f.text_field :title, :class => 'text' %>
 		  </p>
 		
-		  <p>
-		 	<%= f.label :photo %>
-		  	<%= f.file_field :photo %>
-		  </p>
+		  
 		  <p>
 		    <%= f.label :body %>
-		    <%= f.text_area :body, :class => 'tiny_mce' %>
+		    <%= f.cktext_area :body,:height=>400, :width=>900 %>
 		  </p>
 		  <fieldset>
           <legend>For SEO  : </legend>

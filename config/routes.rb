@@ -15,6 +15,10 @@ Stbfinance::Application.routes.draw do |map|
   map.connect '/admin/notifications/:id/delete', :controller=>'admin/notifications', :action=>'destroy'
   map.connect '/admin/contacts/:id/delete', :controller=>'admin/contacts', :action=>'destroy'
   
+  map.connect 'ckeditor/images', :controller => 'ckeditor', :action => 'images'
+  map.connect 'ckeditor/files', :controller => 'ckeditor', :action => 'files'
+  map.connect 'ckeditor/create/:kind', :controller => 'ckeditor', :action => 'create'
+  
   # Administration
    namespace :admin do 
      match '/dashboard' => "dashboard#index", :as => :root
@@ -26,5 +30,5 @@ Stbfinance::Application.routes.draw do |map|
   end
   
   root :to => "home#index"
-  match "*path" => 'home#page-not-found'
+  match "*path" => redirect('/')
 end
