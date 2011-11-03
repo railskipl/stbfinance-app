@@ -23,13 +23,13 @@ Stbfinance::Application.configure do
 
   # these options are only needed if you choose smtp delivery
   config.action_mailer.smtp_settings = {
-      :address              => 'smtp.gmail.com',
-      :port                 => 587,
-      :domain               => 'imap.gmail.com',
-      :user_name            => 'info@stbgroup.in',
-      :password             => 'stbgroup123!',
-      :authentication       => 'login',
-      :enable_starttls_auto => true
+            :address              => 'smtp.gmail.com',
+            :port                 => 587,
+            :domain               => 'imap.gmail.com',
+            :user_name            => 'info@stbgroup.in',
+            :password             => 'stbgroup123!',
+            :authentication       => 'login',
+            :enable_starttls_auto => true
     }
     
   # End
