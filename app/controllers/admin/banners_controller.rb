@@ -3,7 +3,7 @@ class Admin::BannersController < Admin::BaseController
   before_filter :authenticate_admin!, :except => []
   
   def index
-    @banners = Banner.find(:all, :order => 'id desc')
+    
   end
 
   def new
