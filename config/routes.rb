@@ -7,10 +7,12 @@ Stbfinance::Application.routes.draw do |map|
 
   resources :tips
   resources :notifications
+  resources :skills
   
   map.connect '/contacts', :controller=>'home', :action=>'contact'
   map.connect '/pages/:id', :controller=>'pages', :action=>'show'
   map.connect '/admin/pages/:id/delete', :controller=>'admin/pages', :action=>'destroy'
+  map.connect '/admin/skills/:id/delete', :controller=>'admin/skills', :action=>'destroy'
   map.connect '/admin/tips/:id/delete', :controller=>'admin/tips', :action=>'destroy'
   map.connect '/admin/notifications/:id/delete', :controller=>'admin/notifications', :action=>'destroy'
   map.connect '/admin/contacts/:id/delete', :controller=>'admin/contacts', :action=>'destroy'
@@ -28,6 +30,7 @@ Stbfinance::Application.routes.draw do |map|
      resources :notifications
      resources :contacts 
      resources :banners 
+     resources :skills
   end
   
   root :to => "home#index"

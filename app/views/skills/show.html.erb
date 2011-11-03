@@ -4,9 +4,9 @@
 	<!-- Start Main Content -->	
 		<div id="main-content">
 		
-			<h1><%= @page.title %></h1>
+			<h1><%= @skill.category %></h1>
 			<div class="main-ruler"></div>
-			<p><%= @page.body.html_safe %></p>
+			<p><%= @skill.question.html_safe %></p>
 		
 		</div>
 	<!-- End Main Content -->
@@ -18,10 +18,10 @@
 			
 			<div class="widget">
 				<div class="widget-top round-top"></div>
-				<% if @page.id == 12 %>
+				
 				  <h3>Test your skills</h3>				
   				<div class="widget-content">
-  				<% skills = Skill.find(:all, :order => 'id asc') %>
+  				<% skills = Skill.find(:all) %>
   				<% skills.each do |skill| %>
   				<ul class="arrow-list">
   					<li>
@@ -32,45 +32,18 @@
 
   				<% end %>
   				<p>&nbsp;</p>
-  				
+  				<p><a href="/tips" class="arrow-link">View all</a></p>
   				</div>
-				<% else %>
-				<h3>Recent Stock Market Tips</h3>				
-				<div class="widget-content">
-				<% tips = Tip.find(:all, :order => 'id desc', :limit => 5) %>
-				<% tips.each do |stip| %>
-				<ul class="arrow-list">
-					<li>
-						<%= link_to stip.title , tip_path(stip) %>
-					</li>
-														
-				</ul>
-				
-				<% end %>
-				<p>&nbsp;</p>
-				<p><a href="/tips" class="arrow-link">View all</a></p>
-				</div>
-				<% end %>
 			</div>
 			<div class="widget">
 				<div class="widget-top round-top"></div>
-				
-				<% if @page.id == 13 %>
-				  <h3>Ads</h3>
-  				<div class="widget-content">
-  				  <% banners = Banner.find(:all, :limit => 2) %>
-    				<% banners.each do |banner| %>
-  				    <p style="border-bottom: 1px solid #AAAAAA;"><%= image_tag banner.photo.url(:thumb) %></p>
-  				  <% end %>			
-  				</div>
-				<% else %>
 				
 				  <h3>Get in Touch</h3>
   				<div class="widget-content">
   					<p>We are highly committed to deliver services with quality and profitability! Get in touch with us to know more ....</p>
   					<a href="/contacts" class="arrow-link">Contact Us</a>			
   				</div>				
-				<% end %>
+				
 			</div>					
 		</div>
 		<!-- End Sidebar -->
