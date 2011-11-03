@@ -27,6 +27,7 @@ Stbfinance::Application.routes.draw do |map|
      resources :tips
      resources :notifications
      resources :contacts 
+     resources :banners 
   end
   
   root :to => "home#index"
