@@ -31,5 +31,5 @@ Stbfinance::Application.routes.draw do |map|
   end
   
   root :to => "home#index"
-  match "*path" => redirect('/')
+  
 end
