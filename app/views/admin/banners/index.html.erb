@@ -11,14 +11,7 @@
 			    <td width="27%" style="text-align: center !important;">Action</td>
 			  </tr>
 			
-			<% @banners.each do |banner| %>
-			  <tr>
-			    <td><%= image_tag banner.photo.url(:thumb) %></td>
-			    <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_banner_path(banner), :class=>'button positive' %> 
-				</td>
-			    
-			  </tr>
-			<% end %>
+			
 			</table>
 			
 </div>
