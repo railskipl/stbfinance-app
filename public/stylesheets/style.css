@@ -2003,3 +2003,6 @@ blockquote p {
     color: #585858;
     line-height: 22px;
 }
+
+/* Error message */
+.error { color: #FE1717; font: 13px "Trebuchet MS",Arial,Helvetica,sans-serif,sans-serif;}

@@ -22,7 +22,7 @@
 		
 		
 		   <div id="contact-form">
-			<% form_for :reset_password do |form| %>
+			<% form_for :reset_password, :html=>{:id=>'contactform'} do |form| %>
 			
 			   <%= form.hidden_field :id, :value => '1' %>
 				<fieldset>
