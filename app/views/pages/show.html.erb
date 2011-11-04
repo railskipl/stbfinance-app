@@ -18,7 +18,7 @@
 			
 			<div class="widget">
 				<div class="widget-top round-top"></div>
-				<% if @page.id == 12 %>
+				<% if @page.id == 11 %>
 				  <h3>Test your skills</h3>				
   				<div class="widget-content">
   				<% skills = Skill.find(:all, :order => 'id asc') %>
@@ -55,7 +55,7 @@
 			<div class="widget">
 				<div class="widget-top round-top"></div>
 				
-				<% if @page.id == 13 %>
+				<% if @page.id == 12 %>
 				  <h3>Ads</h3>
   				<div class="widget-content">
   				  <% banners = Banner.find(:all, :limit => 2) %>
