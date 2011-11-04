@@ -65,9 +65,7 @@ $(document).ready(function() {
 		},
 		
 		"test_skills[answer]":{
-						required:true,
-							minlength:10,
-						maxlength:499
+						required:true
 		}
 		},
 	messages: {
@@ -87,9 +85,7 @@ $(document).ready(function() {
 						
 		},
 		"test_skills[answer]":{
-						            required: "Please enter answer",
-						            minlength:jQuery.format("Please enter at least 10 characters."),
-						            maxlength:jQuery.format("Can not exceed 500 characters")
+						            required: "Please enter answer"
 		}
 		}
 	});
