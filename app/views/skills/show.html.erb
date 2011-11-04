@@ -7,6 +7,40 @@
 			<h1><%= @skill.category %></h1>
 			<div class="main-ruler"></div>
 			<p><%= @skill.question.html_safe %></p>
+			
+			<div id="contact-form">
+			<% form_for :test_skills, :url => {:action=> 'skillemail', :controller=>'skills'}, :html=>{:id=>'skillform'} do |form| %>
+			
+			 
+				<fieldset>
+					<p class="hide" id="response"></p>				
+					<div class="field-group">
+						<label class="required" for="form_name">Name<span>*</span></label>
+						<%= form.text_field :name, :size => 40, :class => "field" %>
+						
+					</div>
+						
+					<div class="field-group">
+						<label class="required" for="form_email">Email<span>*</span></label>
+						<%= form.text_field :email, :size => 40, :class => "field" %>
+						
+					</div>
+					
+					<div class="field-group">
+						<label class="required" for="form_email">Conatct No<span>*</span></label>
+						<%= form.text_field :contact, :size => 40, :class => "field" %>
+
+					</div>
+					<div class="clear"></div>
+					<label class="required" for="form_message">Answer<span>*</span></label>
+					<%= form.text_area :answer, :rows => 4, :cols => 34, :class => 'text tiny_mce' %>
+					<br/>						
+					<%= submit_tag 'Submit', :class => "small-primary-btn input-btn" %>
+					
+            						
+				</fieldset>
+			<% end %>
+		   </div>
 		
 		</div>
 	<!-- End Main Content -->

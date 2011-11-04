@@ -24,22 +24,22 @@
 		   <div id="contact-form">
 			<% form_for :reset_password, :html=>{:id=>'contactform'} do |form| %>
 			
-			   <%= form.hidden_field :id, :value => '1' %>
+			 
 				<fieldset>
 					<p class="hide" id="response"></p>				
 					<div class="field-group">
 						<label class="required" for="form_name">Name<span>*</span></label>
-						<%= form.text_field :name, :size => 40, :class => "field text validate[required,length[2,30]]" %>
+						<%= form.text_field :name, :size => 40, :class => "field" %>
 						
 					</div>
 					<div class="field-group">
 						<label class="required" for="form_email">Email<span>*</span></label>
-						<%= form.text_field :email, :size => 40, :class => "field text validate[required,custom[email]]" %>
+						<%= form.text_field :email, :size => 40, :class => "field" %>
 						
 					</div>
 					<div class="clear"></div>
 					<label class="required" for="form_message">Message<span>*</span></label>
-					<%= form.text_area :message, :rows => 4, :cols => 34, :class => 'text long validate[required,length[4,600]]' %>						
+					<%= form.text_area :message, :rows => 4, :cols => 34, :class => 'text' %>						
 					<%= submit_tag 'Submit', :class => "small-primary-btn input-btn" %>
 					
             		<div class="hide">

@@ -10,6 +10,7 @@ Stbfinance::Application.routes.draw do |map|
   resources :skills
   
   map.connect '/contacts', :controller=>'home', :action=>'contact'
+  map.connect '/skill/email', :controller=>'skills', :action=>'skillemail'
   map.connect '/pages/:id', :controller=>'pages', :action=>'show'
   map.connect '/admin/pages/:id/delete', :controller=>'admin/pages', :action=>'destroy'
   map.connect '/admin/skills/:id/delete', :controller=>'admin/skills', :action=>'destroy'

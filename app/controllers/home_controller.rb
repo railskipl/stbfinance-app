@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     	        contact.name = "#{params[:reset_password][:name]}"
     	        contact.email = "#{params[:reset_password][:email]}"
     	        contact.message = "#{params[:reset_password][:message]}"
+    	        
     	        if contact.save
 
 

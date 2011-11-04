@@ -56,6 +56,14 @@
 			}); 		
 		</script>	
 		<%= javascript_include_tag 'superfish.js', 'jquery.tweet.js','stylesheetToggle.js', 'common.js' %>
+		<%= javascript_include_tag "tiny_mce/tiny_mce" %>
+		<script type="text/javascript">
+
+       tinyMCE.init({  theme:"advanced",
+  					mode:"textareas",
+      				editor_selector : "tiny_mce"
+      			});
+     </script>
 		
 	<!-- End Javascript -->		
 </head>
