@@ -4,7 +4,7 @@
 	<!-- Start Main Content -->	
 		<div id="main-content">
 		
-			<h1><%= @page.title %></h1>
+			<h1><%= @page.title.html_safe %></h1>
 			<div class="main-ruler"></div>
 			<p><%= @page.body.html_safe %></p>
 		
@@ -19,23 +19,22 @@
 			<div class="widget">
 				<div class="widget-top round-top"></div>
 				<% if @page.id == 11 %>
-				  <h3><blink>Test your skills</blink></h3>				
+				  <h3><blink>Courses</blink></h3>				
   				<div class="widget-content">
-  				<% skills = Skill.find(:all, :order => 'id asc') %>
-  				<% skills.each do |skill| %>
+  				<% si = SubjectInfo.find(:all, :order => 'id asc') %>
+  				<% si.each do |s| %>
   				<ul class="arrow-list">
   					<li>
-  						<%= link_to skill.category , skill_path(skill) %>
+  						<%= link_to s.title , subject_info_path(s) %>
   					</li>
-
-  				</ul>
+				</ul>
 
   				<% end %>
   				<p>&nbsp;</p>
   				
   				</div>
 				<% else %>
-				<h3>Recent Stock Market Tips</h3>				
+				<h3><blink>Recent Stock Market Tips</blink></h3>				
 				<div class="widget-content">
 				<% tips = Tip.find(:all, :order => 'id desc', :limit => 5) %>
 				<% tips.each do |stip| %>

@@ -30,6 +30,7 @@
 				<li><% if controller.controller_name == 'skills' %> <%= link_to "Skill", admin_skills_path, :class=>"active" %> <% else %> <%= link_to "Skill", admin_skills_path %> <% end %></li>
 				  <li><% if controller.controller_name == 'banners' %> <%= link_to "Left Side Banner", admin_banners_path, :class=>"active" %> <% else %> <%= link_to "Left Side Banner", admin_banners_path %> <% end %></li>
 				<li><% if controller.controller_name == 'contacts' %> <%= link_to "Contacts", admin_contacts_path, :class=>"active" %> <% else %> <%= link_to "Contacts", admin_contacts_path %> <% end %></li>
+				<li><% if controller.controller_name == 'subject_infos' %> <%= link_to "Subject Informations", admin_subject_infos_path, :class=>"active" %> <% else %> <%= link_to "Subject Information", admin_subject_infos_path %> <% end %></li>
 				
 				<li>
 					<% if admin_signed_in? %> 

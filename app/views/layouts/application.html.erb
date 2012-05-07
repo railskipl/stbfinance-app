@@ -84,18 +84,17 @@
 			</li>
 			
 			
-				
-				<li class="dropdown">
-					<a <% if @title == 'Finance' %> id="nav-selected" <% elsif @title == 'Education' %> id="nav-selected" <% end %> class="nav-item" href="#">Services</a>
-						<ul class="dropdown-wrap">
-							<li>
-								<a href="/pages/finance">Finance</a>
-							</li>
-							<li>
-								<a href="/pages/education">Education</a>
-							</li>		
-						 </ul>
-				</li>
+
+
+		<li>
+			<a <% if @title == 'Finance' %> id="nav-selected" <% end %> class="nav-item" href="/pages/finance">Finance</a>
+			
+		</li>
+		<li>
+			<a <% if @title == 'Education' %> id="nav-selected" <% end %>  class="nav-item" href="/pages/education">Education</a>
+		
+		</li>		
+	
 			
 			<li>
 				<a <% if @title == 'contacts' %> id="nav-selected" <% end %> class="nav-item" href="/contacts">Contact</a>
@@ -119,7 +118,7 @@
 			</div>
 			<%= content_tag 'div', h(flash[:notice]), :class => 'errorMsg', :id => 'notice' if flash[:notice] %>
 			
-	       	<p class="alert"><%= alert %></p>s
+	       	<p class="alert"><%= alert %></p>
 			
 
 			<%= yield %>
@@ -140,8 +139,8 @@
 			<div class="footer-col">
 				<h3>Connect</h3>
 				<ul>
-					<li><a id="twitter" class="footer-icon-link" href="#">Twitter</a></li>
-					<li><a id="facebook" class="footer-icon-link" href="#">Facebook</a></li>
+					<li><a id="twitter" class="footer-icon-link" href="http://www.twitter.com">Twitter</a></li>
+					<li><a id="facebook" class="footer-icon-link" href="http://www.facebook.com">Facebook</a></li>
 									
 				</ul>
 			</div>

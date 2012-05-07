@@ -3,5 +3,5 @@
 <p><%= @contact.name %></p>
 <p><%= @contact.email %></p>
 <p><%= decode_entities(@contact.message) %></p>
-
+<p><%= @contact.created_at.strftime("%B %d, %Y") %></p>
 </div>

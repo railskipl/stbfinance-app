@@ -1,0 +1,26 @@
+
+
+    <div id="content">
+
+		<%= form_for [:admin, @subject_info] , :html => { :multipart => true } do |f| %>
+		  
+		  <div id="breadcrumb">
+		  	   <%= link_to "Subject Information", admin_subject_info_path %> &raquo; New
+		  </div>
+		 
+		  <p>
+		    <%= f.label :title %>
+		    <%= f.text_field :title %>
+		  </p>
+		  
+		
+		    <%= f.label :body %>
+		    <%= f.text_area :body %>
+		  </p>
+		
+		  
+		  <%= render :partial =>"button" %>
+		
+		<% end %>
+
+

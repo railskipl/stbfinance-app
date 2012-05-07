@@ -1,0 +1,59 @@
+<!-- Start Content -->
+<div id="content">
+
+	<!-- Start Main Content -->	
+		<div id="main-content">
+		
+<h1><%= @subject_info.title.html_safe  %></h1>
+<div class="main-ruler"></div>
+<%= @subject_info.body.html_safe %>
+<%= link_to "Test Your skills", skill_path(@subject_info), :class=>'small-primary-btn input-btn' %>
+<div id="contact-form">
+				
+			   </div>
+			
+			</div>
+		<!-- End Main Content -->
+			
+		<!-- Start Sidebar -->
+			<div id="sidebar">
+			
+				
+				
+				<div class="widget">
+					<div class="widget-top round-top"></div>
+					
+					  <h3><blink>Courses</blink></h3>				
+	  				<div class="widget-content">
+	  				<% subject_infos = SubjectInfo.find(:all) %>
+	  				<% subject_infos.each do |subject_info| %>
+	  				<ul class="arrow-list">
+	  					<li>
+	  						<%= link_to subject_info.title , subject_info_path(subject_info) %>
+	  					</li>
+	
+	  				</ul>
+	
+	  				<% end %>
+	  				<p>&nbsp;</p>
+	  				
+	  				</div>
+				</div>
+					
+				<div class="widget">
+					<div class="widget-top round-top"></div>
+					
+					  <h3>Get in Touch</h3>
+	  				<div class="widget-content">
+	  					<p>We are highly committed to deliver services with quality and profitability! Get in touch with us to know more ....</p>
+	  					<a href="/contacts" class="arrow-link">Contact Us</a>			
+	  				</div>				
+					
+				</div>					
+			</div>
+			<!-- End Sidebar -->
+			
+		<!-- End Sidebar -->
+		<div class="clear"></div>
+	</div>
+	<!-- End Content -->

@@ -7,7 +7,8 @@
 			    <td width="25%">Name</td>
 			    <td>Email</td>
 			    <td>Message</td>
-			    <td width="27%" style="text-align: center !important;">Action</td>
+			    <td>Date</td>
+			    <td width="15%" style="text-align: center !important;">Action</td>
 			  </tr>
 			
 			<% @contacts.each do |contact| %>
@@ -15,6 +16,7 @@
 			    <td><%= link_to contact.name, admin_contact_path(contact) %></td>
 				<td><%= contact.email %></td>
 			    <td><%= truncate(contact.message, :length => 90) %></td>
+			    <td><%= contact.created_at.strftime("%B %d, %Y") %></td>
 			    <td style="text-align: center !important;"> 
 				<a href="/admin/contacts/<%= contact.id %>/delete" onclick="if(confirm('Are you sure you want to delete this contact?'))  return true;  else  return false;" class="button negative" >Delete</a>
 				</td>

@@ -16,3 +16,4 @@ gem 'ckeditor', '3.4.2.pre'
 gem 'paperclip'
 
 gem 'aws-s3'
+gem 'aws-sdk'

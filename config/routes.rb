@@ -8,16 +8,19 @@ Stbfinance::Application.routes.draw do |map|
   resources :tips
   resources :notifications
   resources :skills
+  resources :subject_infos
   
   map.connect '/contacts', :controller=>'home', :action=>'contact'
   map.connect '/skill/email', :controller=>'skills', :action=>'skillemail'
   map.connect '/pages/:id', :controller=>'pages', :action=>'show'
   map.connect '/admin/pages/:id/delete', :controller=>'admin/pages', :action=>'destroy'
   map.connect '/admin/skills/:id/delete', :controller=>'admin/skills', :action=>'destroy'
+  map.connect '/admin/subject_infos/:id/delete', :controller=>'admin/subject_infos', :action=>'destroy'
   map.connect '/admin/tips/:id/delete', :controller=>'admin/tips', :action=>'destroy'
   map.connect '/admin/notifications/:id/delete', :controller=>'admin/notifications', :action=>'destroy'
   map.connect '/admin/contacts/:id/delete', :controller=>'admin/contacts', :action=>'destroy'
-  
+  map.connect '/admin/subject_infos/:id/delete', :controller=>'admin/subject_infos', :action=>'destroy'
+
   map.connect 'ckeditor/images', :controller => 'ckeditor', :action => 'images'
   map.connect 'ckeditor/files', :controller => 'ckeditor', :action => 'files'
   map.connect 'ckeditor/create/:kind', :controller => 'ckeditor', :action => 'create'
@@ -32,8 +35,9 @@ Stbfinance::Application.routes.draw do |map|
      resources :contacts 
      resources :banners 
      resources :skills
+     resources :subject_infos
   end
   
   root :to => "home#index"
-  match "*path" => redirect('/')
+  
 end

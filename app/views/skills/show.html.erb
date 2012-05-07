@@ -7,7 +7,7 @@
 			<h1><%= @skill.category %></h1>
 			<div class="main-ruler"></div>
 			<p><%= @skill.question.html_safe %></p>
-			
+		
 			<div id="contact-form">
 			<% form_for :test_skills, :url => {:action=> 'skillemail', :controller=>'skills'}, :html=>{:id=>'skillform'} do |form| %>
 			
@@ -53,13 +53,13 @@
 			<div class="widget">
 				<div class="widget-top round-top"></div>
 				
-				  <h3><blink>Test your skills</blink></h3>				
+				  <h3><blink>Courses</blink></h3>				
   				<div class="widget-content">
-  				<% skills = Skill.find(:all) %>
+  				<% skills = SubjectInfo.find(:all) %>
   				<% skills.each do |skill| %>
   				<ul class="arrow-list">
   					<li>
-  						<%= link_to skill.category , skill_path(skill) %>
+  						<%= link_to skill.title , subject_info_path(skill) %>
   					</li>
 
   				</ul>

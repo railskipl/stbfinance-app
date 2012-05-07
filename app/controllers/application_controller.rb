@@ -6,13 +6,7 @@ class ApplicationController < ActionController::Base
   end
   
 
-  def rescue_with_handler(exception)
-       redirect_to '/'
-   end
-
-   def method_missing(id, *args)
-       redirect_to '/'
-   end
+  
     
   before_filter :meta_defaults
     private
