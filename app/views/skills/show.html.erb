@@ -55,7 +55,7 @@
 				
 				  <h3><blink>Courses</blink></h3>				
   				<div class="widget-content">
-  				<% skills = SubjectInfo.find(:all) %>
+  				<% skills = SubjectInfo.find(:all, :order => 'id asc') %>
   				<% skills.each do |skill| %>
   				<ul class="arrow-list">
   					<li>

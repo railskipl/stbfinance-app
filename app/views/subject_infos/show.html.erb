@@ -25,7 +25,7 @@
 					
 					  <h3><blink>Courses</blink></h3>				
 	  				<div class="widget-content">
-	  				<% subject_infos = SubjectInfo.find(:all) %>
+	  				<% subject_infos = SubjectInfo.find(:all, :order => 'id asc') %>
 	  				<% subject_infos.each do |subject_info| %>
 	  				<ul class="arrow-list">
 	  					<li>
