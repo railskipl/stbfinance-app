@@ -20,6 +20,7 @@ Stbfinance::Application.routes.draw do |map|
   map.connect '/admin/notifications/:id/delete', :controller=>'admin/notifications', :action=>'destroy'
   map.connect '/admin/contacts/:id/delete', :controller=>'admin/contacts', :action=>'destroy'
   map.connect '/admin/subject_infos/:id/delete', :controller=>'admin/subject_infos', :action=>'destroy'
+  map.connect '/admin/announcements/:id/delete', :controller=>'admin/announcements', :action=>'destroy'
 
   map.connect 'ckeditor/images', :controller => 'ckeditor', :action => 'images'
   map.connect 'ckeditor/files', :controller => 'ckeditor', :action => 'files'
@@ -36,6 +37,7 @@ Stbfinance::Application.routes.draw do |map|
      resources :banners 
      resources :skills
      resources :subject_infos
+     resources :announcements
   end
   
   root :to => "home#index"

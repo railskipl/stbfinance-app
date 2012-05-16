@@ -1,0 +1,29 @@
+ <div id="content">	
+ 	<p class='buttons'>
+ 		
+ 		<%= link_to  "Add announcements", new_admin_announcement_path, :class => 'button positive' %>
+ 		</p>
+		<p class='clear'></p>
+		   
+
+			<table class="admintable">
+			  <tr class="admintablehd">
+			    <td width="25%">Title</td>
+			    
+			    <td width="27%" style="text-align: center !important;">Action</td>
+			  </tr>
+			
+			<% @announcements.each do |page| %>
+			  <tr>
+			    <td><%= page.title %></td>
+			    
+			    <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_announcement_path(page), :class=>'button positive' %> &nbsp;&nbsp; 
+				<a href="/admin/announcements/<%= page.id %>/delete" onclick="if(confirm('Are you sure you want to delete this page?'))  return true;  else  return false;" class="button negative" >Delete</a>
+				</td>
+			    
+			  </tr>
+			<% end %>
+			</table>
+			<br />
+			
+</div>

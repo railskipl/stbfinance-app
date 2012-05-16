@@ -6,6 +6,13 @@
 		
 <h1><%= @subject_info.title.html_safe  %></h1>
 <div class="main-ruler"></div>
+
+<% @announcements.each do |announcement| %>
+<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+	<div class='marquee_text'><%= announcement.title %></div>
+</marquee>
+<% end %>
+
 <%= @subject_info.body.html_safe %>
 <%= link_to "Test Your skills", skill_path(@subject_info), :class=>'small-primary-btn input-btn' %>
 <div id="contact-form">
