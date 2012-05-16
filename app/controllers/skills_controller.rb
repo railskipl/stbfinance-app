@@ -1,7 +1,8 @@
 class SkillsController < ApplicationController
   
   def show
-    @skill = Skill.find(params[:id])   
+    @skill = Skill.find(params[:id]) 
+    @announcements = Announcement.all  
   end
   
   def skillemail

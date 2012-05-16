@@ -6,6 +6,12 @@
 		
 			<h1><%= @skill.category %></h1>
 			<div class="main-ruler"></div>
+			<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+       <% @announcements.each do |announcement| %>
+      	<div class='marquee_text'><%= announcement.title %></div>
+       <% end %>
+      </marquee>
+      
 			<p><%= @skill.question.html_safe %></p>
 		
 			<div id="contact-form">
