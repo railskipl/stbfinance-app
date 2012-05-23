@@ -50,7 +50,7 @@
 				<ul class="arrow-list">
 					<li>
 						<%= link_to stip.title , tip_path(stip) %>
-						<p>added by- 23/05/2012</p>
+						<p>added by- <%= (stip.created_at.strftime("%a %d %b, %Y")) %></p>
 					</li>
 														
 				</ul>
