@@ -2006,3 +2006,5 @@ blockquote p {
 
 /* Error message */
 .error { color: #FE1717; font: 13px "Trebuchet MS",Arial,Helvetica,sans-serif,sans-serif;}
+
+.marquee_text_education {color: #015CB3 !important;font-weight: bold; background: url("../images/skins/blue/arrow.gif") no-repeat scroll 0 6px transparent; font-size: 13px; display: inline-block; padding-left: 8px;}

@@ -8,7 +8,7 @@
 			<div class="main-ruler"></div>
 			<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
        <% @announcements.each do |announcement| %>
-      	<div class='marquee_text'><%= announcement.title %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      	<div class='marquee_text_education'><%= announcement.title %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
        <% end %>
       </marquee>
       
