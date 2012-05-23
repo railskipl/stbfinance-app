@@ -6,6 +6,15 @@
 		
 			<h1><%= @page.title.html_safe %></h1>
 			<div class="main-ruler"></div>
+			<% if @page.id == 11 %>
+			<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+			<%  @announcements = Announcement.all %>
+       <% @announcements.each do |announcement| %>
+      	<div class='marquee_text'><%= announcement.title %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+       <% end %>
+      </marquee>
+      <% end %>
+      
 			<p><%= @page.body.html_safe %></p>
 		
 		</div>
