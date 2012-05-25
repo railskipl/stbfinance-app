@@ -66,6 +66,22 @@
   					mode:"textareas",
       				editor_selector : "tiny_mce"
       			});
+      			
+      		
+            
+            //courtesy of BoogieJack.com
+            function killCopy(e){
+            return false
+            }
+            function reEnable(){
+            return true
+            }
+            document.onselectstart=new Function ("return false")
+            if (window.sidebar){
+            document.onmousedown=killCopy
+            document.onclick=reEnable
+            }
+            
      </script>
 		
 	<!-- End Javascript -->		
